@@ -1,0 +1,91 @@
+//
+//  PrefixHeader.pch
+//  网易新闻瀑布流
+//
+//  Created by Kenny.li on 16/3/8.
+//  Copyright (c) 2016年 KK. All rights reserved.
+// $(SRCROOT)/蘑菇街瀑布流Tests/prefixHeader.pch
+
+#import <UIKit/UIKit.h>
+
+#ifndef ________PrefixHeader_pch
+#define ________PrefixHeader_pch//只编译一次
+
+
+#import "UIView+Extension.h"
+#import "MJExtension.h"
+#import "UIView+AutoLayout.h"
+#import "UIButton+Extension.h"
+//#import "HMMetaDataTool.h"
+#import "MBProgressHUD+MJ.h"
+#import "API.h"
+
+#import "Colours.h"
+#import "KKNetWorkTool.h"
+#import "UIImageView+WebCache.h"
+
+
+////监听通知
+//#define HMSortDidSelectNotification @"HMSortDidSelectNotification"
+//#define HMSortSelected @"HMSortSelected"
+//
+//#define HMCityDidSelectNotification @"HMCityDidSelectNotification"
+//#define HMCitySelected @"HMCitySelected"
+//
+//#define HMCategoryDidSelectNotification @"HMCategoryDidSelectNotification"
+//#define HMCategorySelected @"HMCategorySelected"
+//#define HMSubCategoryNameSelected @"HMSubCategoryNameSelected"
+//
+//#define HMRegionDidSelectNotification @"HMRegionDidSelectNotification"
+//#define HMRegionSelected @"HMRegionSelected"
+//#define HMSubRegionNameSelected @"HMSubRegionNameSelected"
+//
+////自定义UM
+//#define UMAPPKey @"571a550c67e58ebbf9004005"
+//
+//#define SinaAppKey @"1113485081"
+//#define SinaAppSecret @"1cf2bca58084f4cdcf0de1fe2bbaa0b6"
+//
+////自定义路径 最新选中城市
+//#define HMSelectedCityNameFilePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"recentCityGroupsSelected.plist"]
+//
+////自定义路径 用户上次排序
+//#define HMSelectedSortFilePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"lastSort_Selected.plist"]
+////自定义路径 用户上次区域
+//#define HMSelectedRegionFilePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"lastRegion_Selected.plist"]
+////自定义路径 用户上次子区域
+//#define HMSelectedSubRegionFilePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"lastSubRegion_Selected.plist"]
+////自定义路径 用户上次分类
+//#define HMSelectedCategoryFilePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"lastCategory_Selected.plist"]
+////自定义路径 用户上次子分类
+//#define HMSelectedSubCategoryFilePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"lastSubCategory_Selected.plist"]
+//
+////自定义路径 用户浏览历史
+//#define HMHistoryDealsFilePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"historyDeals.plist"]
+////自定义路径 用户收藏
+//#define HMCollectDealsFilePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"collectDeals.plist"]
+
+
+//屏幕尺寸
+#define HMScreenW [UIScreen mainScreen].bounds.size.width
+#define HMScreenH [UIScreen mainScreen].bounds.size.height
+//颜色
+#define HMColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+
+#define  HMGlobelBg  HMColor(230,230,230,1)
+
+//随机色
+#define HMRandomColor   HMColor(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(256),1)
+#define HMRandomColorRGBA(a)   HMColor(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(256),a)
+
+#ifdef DEBUG  //DEBUG状态
+#define NSLogg(...) NSLog(__VA_ARGS__)
+#else //发布状态
+#define NSLoggg(...)
+#endif
+
+//是否大于IOS7
+#define IOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0 )
+
+
+#endif

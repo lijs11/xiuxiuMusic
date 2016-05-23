@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomPlayView">
+            <connections>
+                <outlet property="playLinePic" destination="8T5-9D-ku0" id="7B3-Qz-aK6"/>
+                <outlet property="singerName" destination="XX6-s0-iGN" id="OaR-PC-t8K"/>
+                <outlet property="songName" destination="qy7-E6-bgK" id="JBA-OM-3jT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="aQV-I0-Ci3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPO-IV-ky2">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="jump" destination="-1" eventType="touchUpInside" id="pBX-cJ-pv3"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playLine" translatesAutoresizingMaskIntoConstraints="NO" id="8T5-9D-ku0">
+                    <rect key="frame" x="315" y="15" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Ltk-YM-lh3"/>
+                        <constraint firstAttribute="width" constant="40" id="syH-QV-krl"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="Wii-FM-usw">
+                    <rect key="frame" x="20" y="15" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7Og-aT-NDN"/>
+                        <constraint firstAttribute="width" constant="40" id="ZdQ-Jo-1rW"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还没有播放歌曲哦" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qy7-E6-bgK" userLabel="song">
+                    <rect key="frame" x="76" y="13" width="200" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XX6-s0-iGN" userLabel="singer">
+                    <rect key="frame" x="76" y="34" width="192" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Wii-FM-usw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="3D6-cY-iHw"/>
+                <constraint firstItem="XX6-s0-iGN" firstAttribute="leading" secondItem="Wii-FM-usw" secondAttribute="trailing" constant="16" id="IZa-MN-QIj"/>
+                <constraint firstAttribute="trailing" secondItem="XX6-s0-iGN" secondAttribute="trailing" constant="107" id="KxV-g8-Gf1"/>
+                <constraint firstAttribute="bottom" secondItem="XX6-s0-iGN" secondAttribute="bottom" constant="15" id="L2Q-IZ-7cW"/>
+                <constraint firstAttribute="trailing" secondItem="gPO-IV-ky2" secondAttribute="trailing" id="Ptd-dK-2uv"/>
+                <constraint firstAttribute="trailing" secondItem="qy7-E6-bgK" secondAttribute="trailing" constant="99" id="RQh-8B-HJ5"/>
+                <constraint firstItem="gPO-IV-ky2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SmB-ci-yR8"/>
+                <constraint firstItem="gPO-IV-ky2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="beD-Uq-y0C"/>
+                <constraint firstAttribute="bottom" secondItem="8T5-9D-ku0" secondAttribute="bottom" constant="15" id="iBZ-Qe-WFq"/>
+                <constraint firstItem="qy7-E6-bgK" firstAttribute="leading" secondItem="Wii-FM-usw" secondAttribute="trailing" constant="16" id="iSx-Kn-6ym"/>
+                <constraint firstAttribute="trailing" secondItem="8T5-9D-ku0" secondAttribute="trailing" constant="20" id="jPG-gM-12h"/>
+                <constraint firstItem="8T5-9D-ku0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="lIF-dV-kqL"/>
+                <constraint firstAttribute="bottom" secondItem="gPO-IV-ky2" secondAttribute="bottom" id="qhd-BY-JYt"/>
+                <constraint firstItem="XX6-s0-iGN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="34" id="qi6-kd-J47"/>
+                <constraint firstAttribute="bottom" secondItem="Wii-FM-usw" secondAttribute="bottom" constant="15" id="rWY-Uu-I0m"/>
+                <constraint firstItem="qy7-E6-bgK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="13" id="sqU-VT-ypG"/>
+                <constraint firstAttribute="bottom" secondItem="qy7-E6-bgK" secondAttribute="bottom" constant="36" id="wBL-cj-h8L"/>
+                <constraint firstItem="Wii-FM-usw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="wTn-ca-9B1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="135.5" y="103"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="default" width="400" height="400"/>
+        <image name="playLine" width="40" height="40"/>
+    </resources>
+</document>
